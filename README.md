@@ -1,8 +1,10 @@
 
-LCD and Keypad Library for DFRobot DFR0009
-==========================================
+LCD and Keypad Library
+======================
 
 by Andy Gock
+
+for DFRobot LCD Keypad Arduino Shield
 
 Blog post:
 http://micro.gock.net/2013/02/arduino-library-for-df-robot-16x2-lcd-keypad-shield/
