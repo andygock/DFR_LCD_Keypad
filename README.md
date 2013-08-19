@@ -15,8 +15,7 @@ http://www.dfrobot.com/index.php?route=product/product&product_id=51
 Installation
 ------------
 
-Create directory "DFR_LCD_Keypad" in the libaries directory
-in your Ardruino workspace.
+(Arduino 1.x) If adding library for the first time, in your Arduino workspace, open the "libraries" directory, create a new directory "DFR_LCD_Keypad". If updating, just replace the files alread in there.
 
 Add contents of this repository inside there.
 
