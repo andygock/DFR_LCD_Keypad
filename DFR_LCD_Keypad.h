@@ -66,6 +66,7 @@ public:
 	DFR_LCD_Keypad();
 	DFR_LCD_Keypad(const uint8_t key_pin);
 	DFR_LCD_Keypad(const uint8_t key_pin, LiquidCrystal *lcd);
+	void init(const uint8_t key_pin);
 	void backlight_off(void);
 	void backlight_on(void);
 	uint8_t read_key(void);

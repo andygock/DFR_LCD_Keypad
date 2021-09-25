@@ -7,10 +7,21 @@
 
 DFR_LCD_Keypad::DFR_LCD_Keypad()
 {
-  DFR_LCD_Keypad::DFR_LCD_Keypad(DFR_LCD_KEYPAD_KEY_PIN);
+  this->init(DFR_LCD_KEYPAD_KEY_PIN);
 }
 
 DFR_LCD_Keypad::DFR_LCD_Keypad(const uint8_t key_pin)
+{
+  this->init(key_pin);
+}
+
+DFR_LCD_Keypad::DFR_LCD_Keypad(const uint8_t key_pin, LiquidCrystal *lcd)
+{
+  _lcd = lcd;
+  this->init(A0);
+}
+
+void DFR_LCD_Keypad::init(const uint8_t key_pin)
 {
   // Make sure pin 10 is input, if it set to output and put high, it will cause the pin
   // to drive the backlight directly, which will exceed the maximum output load of the
@@ -19,12 +30,6 @@ DFR_LCD_Keypad::DFR_LCD_Keypad(const uint8_t key_pin)
 
   _key_pin = key_pin;
   _last_key = DFR_LCD_KEYPAD_KEY_NONE;
-}
-
-DFR_LCD_Keypad::DFR_LCD_Keypad(const uint8_t key_pin, LiquidCrystal *lcd)
-{
-  _lcd = lcd;
-  DFR_LCD_Keypad::DFR_LCD_Keypad(A0);
 }
 
 void DFR_LCD_Keypad::backlight_off(void)
